@@ -88,4 +88,5 @@ function onListening() {
     
   console.warn("SERVER:: started on localhost:"+addr.port);
   require('openurl').open("http://localhost:"+addr.port);
+  require('openurl').open("http://localhost:"+addr.port+"/tests");
 }
