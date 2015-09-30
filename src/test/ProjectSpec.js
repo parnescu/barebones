@@ -1,12 +1,12 @@
 "use strict";
 
-var MainClass = require('../main/javascript/Main.js');
 var _item;
 
 describe("Main test ", function(){
 	describe("Bogus test", function(){
-		it("make sure it works", function(){
+		it("make sure everything it works", function(){
 			expect(true).toEqual(true)
+			expect(1+1).toEqual(2)
 		})
 	})
 

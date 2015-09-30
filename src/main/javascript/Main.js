@@ -16,5 +16,9 @@
 
 	}
 	
-	module.exports = fn;
+	if (window.module){
+		module.exports.MainClass = fn;
+	}else{
+		window.MainClass = fn;	
+	}
 })()

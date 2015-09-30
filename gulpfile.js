@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var closure = require('gulp-closure-compiler');
-var jasmine = require('gulp-jasmine');
 var argz = require('yargs').argv;
 
 /*
@@ -11,8 +10,8 @@ var argz = require('yargs').argv;
 */
 gulp.task("default", ["sass"], function(){
 	var compileLeveL = argz.p && argz.p === true ? "ADVANCED_OPTIMIZATIONS" : "SIMPLE_OPTIMIZATIONS";
-	
-	return gulp.src("src/main/**/*.js")
+
+	gulp.src("src/main/**/*.js")
 		.pipe(closure({
 			compilerPath: 'node_modules/google-closure-compiler/compiler.jar',
 			fileName: 'main.js',
@@ -30,8 +29,8 @@ gulp.task("watch", function(){
 });
 
 gulp.task("test", function(){
-	return gulp.src('src/test/**/*.js')
-		.pipe(jasmine())
+	// return gulp.src('src/test/**/*.js')
+	// 	.pipe(jasmine())
 })
 
 gulp.task('sass', function () {

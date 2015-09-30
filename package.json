@@ -4,7 +4,7 @@
   "author": "Adrian Parnescu",
   "private": true,
   "scripts": {
-    "install": "gulp && gulp test",
+    "install": "gulp && npm start",
     "start": "node-dev ./server/bin/www"
   },
   "dependencies": {
@@ -14,11 +14,13 @@
     "gulp": "^3.9.0",
     "gulp-closure-compiler": "^0.3.1",
     "gulp-concat": "^2.6.0",
-    "gulp-jasmine": "^2.1.0",
     "gulp-sass": "^2.0.4",
     "jade": "~1.11.0",
     "node-dev": "^2.7.1",
     "openurl": "^1.1.0",
     "yargs": "^3.26.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.3.2"
   }
 }
